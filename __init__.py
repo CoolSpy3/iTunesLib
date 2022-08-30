@@ -51,6 +51,4 @@ def readXML(file):
     for child in root:
         if child.tag == "dict":
             parsedFile += addDict(child)
-    with open('tmp.json', 'wb') as file:
-        file.write(parsedFile.encode('utf-8', 'ignore'))
     return json.loads(parsedFile[:-1])
